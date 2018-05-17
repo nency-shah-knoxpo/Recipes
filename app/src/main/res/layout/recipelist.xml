@@ -1,0 +1,34 @@
+<RelativeLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_lock_black_24dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/deleteimgbtn"
+        android:layout_margin="2dp"/>
+
+    <TextView
+        android:id="@+id/txtRecipeName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipe-Name"
+        android:layout_toLeftOf="@id/deleteimgbtn"
+        android:textStyle="bold"
+        android:padding="4dp"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="dd-mm-yyyy"
+        android:id="@+id/txtLastModifyDate"
+        android:padding="4dp"
+        android:layout_below="@id/txtRecipeName"
+        android:layout_toLeftOf="@id/deleteimgbtn"/>
+</RelativeLayout>

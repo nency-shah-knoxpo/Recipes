@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecipeBook</string>
+    <string name="norecipes">No Recipies yet...start adding one...</string>
+</resources>
