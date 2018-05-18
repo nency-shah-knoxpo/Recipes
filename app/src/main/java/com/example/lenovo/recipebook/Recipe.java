@@ -2,18 +2,18 @@ package com.example.lenovo.recipebook;
 
 import java.util.UUID;
 
-public class RecipeModel {
+public class Recipe {
 
-    UUID mRecipeID;
-    String mRecipeName;
-    String mRecipeDescription;
+    private UUID mRecipeID;
+    private String mRecipeName;
+    private String mRecipeDescription;
 
-    public RecipeModel() {
+    public Recipe() {
         mRecipeID = UUID.randomUUID();
     }
 
 
-    public RecipeModel(String name,String Description) {
+    public Recipe(String name, String Description) {
         mRecipeID = UUID.randomUUID();
         mRecipeName = name;
         mRecipeDescription = Description;

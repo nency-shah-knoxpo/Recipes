@@ -3,27 +3,30 @@
              xmlns:app="http://schemas.android.com/apk/res-auto"
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
-             android:layout_height="match_parent">
+             android:layout_height="match_parent"
+    >
 
-<android.support.v7.widget.RecyclerView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/recipe_recycler_view"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"/>
-
-    <TextView
+    <android.support.v7.widget.RecyclerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rv_recipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/norecipes"
+        />
+
+    <TextView
+        android:id="@+id/tv_null_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:gravity="center"
-        android:id="@+id/txtNullList"/>
+        android:text="@string/norecipes"/>
+
     <Button
+        android:id="@+id/btn_add_recipe"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:gravity="center"
-        android:id="@+id/btnAddRecipe"
         android:layout_marginTop="50dp"
-        android:text="Add"/>
+        android:gravity="center"
+        android:text="@string/add_first_recipe"/>
 </FrameLayout>

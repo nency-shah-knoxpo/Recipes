@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">RecipeBook</string>
-    <string name="norecipes">No Recipies yet...start adding one...</string>
+    <string name="norecipes">No Recipies yet.start adding one.</string>
+    <string name="toast_recipe_added">Recipe Added</string>
+    <string name="toast_recipe_discarded">Recipe Discarded</string>
+    <string name="label_name_recipe">Enter Recipe Name</string>
+    <string name="label_name_description">Recipe Description</string>
+    <string name="date">Date</string>
+    <string name="confirmation_message">All Your changes will be discarded..Continue..?</string>
+<string name="save_recipe">Save</string>
+    <string name="add_first_recipe">Add</string>
+    <string name="hint_dialog_enter_recipe">Enter Recipe Name</string>
+
 </resources>

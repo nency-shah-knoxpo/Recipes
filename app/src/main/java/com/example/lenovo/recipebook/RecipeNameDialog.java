@@ -11,13 +11,13 @@ import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class RecipeNameDialog extends DialogFragment {
     private static final String TAG = RecipeNameDialog.class.getSimpleName();
     public static final String RECIPE_NAME = TAG + ".RECIPE_NAME";
 
-    EditText mRecipeName;
-String name;
+    private EditText mRecipeNameET;
 
 
     @NonNull
@@ -26,25 +26,26 @@ String name;
 
         View v = LayoutInflater.from(getActivity())
                 .inflate(R.layout.recipenamedialog, null);
-        mRecipeName = (EditText) v.findViewById(R.id.dialog_recipe_name);
+        mRecipeNameET = (EditText) v.findViewById(R.id.et_dialog_recipe_name);
 
 
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity())
-                .setView(R.layout.recipenamedialog)
+                .setView(v)
+
+                .setTitle(R.string.label_name_recipe)
                 .setCancelable(false)
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        name = mRecipeName.getText().toString();
-
+                        String name = mRecipeNameET.getText().toString();
                         sendResult(Activity.RESULT_OK, name);
                     }
                 })
                 .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-
-                        sendResult(Activity.RESULT_CANCELED, "xyz");
+                        Toast.makeText(getActivity(), R.string.toast_recipe_discarded, Toast.LENGTH_SHORT).show();
+                        sendResult(Activity.RESULT_CANCELED, null);
                     }
                 });
         return builder.create();

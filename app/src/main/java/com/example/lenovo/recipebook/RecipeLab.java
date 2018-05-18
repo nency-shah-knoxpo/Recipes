@@ -3,19 +3,20 @@ package com.example.lenovo.recipebook;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class RecipeLab {
 
-    private ArrayList<RecipeModel> mRecipes;
+    private ArrayList<Recipe> mRecipes;
 
 
     private Context mAppContext;
 
     private RecipeLab(Context context) {
         mAppContext = context.getApplicationContext();
-       // mRecipes = new ArrayList<>();
+        mRecipes = new ArrayList<>();
        /* for (int i = 0; i <= 2; i++) {
-            RecipeModel recipe = new RecipeModel();
+            Recipe recipe = new Recipe();
             recipe.setRecipeName("Recipe:" + i);
             recipe.setRecipeDescription("Desc:" + i);
             mRecipes.add(recipe);
@@ -34,14 +35,24 @@ public class RecipeLab {
         return sRecipeLab;
     }
 
-    public ArrayList<RecipeModel> getRecipes()
-    {
+    public ArrayList<Recipe> getRecipes() {
         return mRecipes;
 
     }
 
-    public void addRecipe(RecipeModel recipeModel){
-        mRecipes.add(recipeModel);
+    public void addRecipe(Recipe recipe) {
+        mRecipes.add(recipe);
+
+    }
+
+    public void deleteRecipe(UUID recipeId){
+        for (Recipe recipe : mRecipes) {
+            if (recipe.getRecipeID().equals(recipeId)) {
+
+                mRecipes.remove(recipe);
+            }
+        }
+
 
     }
 }

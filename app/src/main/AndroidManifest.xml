@@ -15,12 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".RecipeListFragment">
+
+        <activity android:name=".AddRecipeActivity"
+            android:label="Add Recipe">
         </activity>
-        <activity android:name=".AddRecipeActivity">
-        </activity>
-        <activity android:name=".AddRecipeFragment">
-        </activity>
+
     </application>
 
 </manifest>
